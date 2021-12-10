@@ -36,24 +36,27 @@ namespace CarLotSimulator
             bmw.MakeEngineNoise();
             bmw.MakeHonkNoise();
 
-            lot.CarList.Add(bmw);
+            lot.Cars.Add(bmw);
 
             Car hyundai = new Car() { Year = 2020, Make = "Hyundai", Model = "Sonata", EngineNoise = "Help", HonkNoise = "Beep beep" };
 
             hyundai.MakeEngineNoise();
             hyundai.MakeHonkNoise();
 
-            lot.CarList.Add(hyundai);
+            lot.Cars.Add(hyundai);
 
             Car ford = new Car(2019, "Ford", "F150", "Vroom vroom", "Look out");
 
             ford.MakeEngineNoise();
             ford.MakeHonkNoise();
 
-            lot.CarList.Add(ford);
+            lot.Cars.Add(ford);
 
             //*************BONUS X 2*************//Done!
-            foreach (var car in lot.CarList)
+
+            Console.WriteLine($"Number of cars created {CarLot.numberOfCars}");
+
+            foreach (var car in lot.Cars)
             {
                 Console.WriteLine($"Year: {car.Year} Make: {car.Make} Model: {car.Model}");
             }
